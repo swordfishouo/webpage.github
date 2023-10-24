@@ -6,13 +6,11 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
+    <h1>有這行字代表網頁無錯誤</h1>
   </body>
   <script type="text/javascript">
-    //當我們從應用程式收到訊息時，將其顯示在頁面上
-    ThunkableWebviewerExtension.receiveMessage(function(message) {
-    alert(message)
-    });
 
+  //當我們從應用程式收到訊息時，將其顯示在頁面上
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       document.getElementById('messageDisplay').innerHTML = message;
     });
